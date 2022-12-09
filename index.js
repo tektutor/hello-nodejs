@@ -1,13 +1,22 @@
-var http = require('http');
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>TekTutor Hello ReactJS app</title>
+  </head>
+  <body>
 
-var server = http.createServer(function(request, response) {
+    <h2>ReactJS - Hello World!</h2>
+    <!-- We will put our React component inside this div. -->
+    <div id="like_button_container"></div>
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
-});
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
 
-var port = 80;
-server.listen(port);
-
-console.log("Server running at http://localhost:%d", port);
+  </body>
+</html>
